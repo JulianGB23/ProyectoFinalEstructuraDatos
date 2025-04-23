@@ -1,6 +1,8 @@
-package modelo;
+package modelo.usuarios;
 
-public class Moderador extends Usuario{
+import modelo.usuarios.Usuario;
+
+public class Moderador extends Usuario {
 
     public Moderador(String id, String nombre, String correo, String contrasenia){
 
