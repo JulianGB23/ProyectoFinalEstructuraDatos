@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400" prefWidth="700" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="controladores.SugerenciasController">
+
+    <top>
+        <Label style="-fx-font-size: 18px; -fx-padding: 10;" text="Sugerencias de Compañeros con Intereses Similares" />
+    </top>
+
+    <center>
+        <TableView fx:id="tablaSugerencias">
+            <columns>
+                <TableColumn fx:id="colNombre" prefWidth="150" style="-fx-background-color: #d6dcfd;" text="Nombre" />
+                <TableColumn fx:id="colCorreo" prefWidth="200" style="-fx-background-color: #d6dcfd;" text="Correo" />
+                <TableColumn fx:id="colIntereses" prefWidth="300" style="-fx-background-color: #d6dcfd;" text="Intereses en común" />
+                <TableColumn fx:id="colOrigen" prefWidth="100" style="-fx-background-color: #d6dcfd;" text="Origen" />
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" style="-fx-padding: 10;">
+            <Button onAction="#enviarSolicitud" style="-fx-background-color: #5e77ff;" text="Enviar Solicitud de Amistad" textFill="WHITE">
+            <font>
+               <Font name="Book Antiqua" size="12.0" />
+            </font></Button>
+            <Button onAction="#verSolicitudesPendientes" style="-fx-background-color: #5e77ff;" text="Ver Solicitudes Pendientes" textFill="WHITE">
+            <font>
+               <Font name="Book Antiqua" size="12.0" />
+            </font></Button>
+            <Button onAction="#verConexiones" style="-fx-background-color: #5e77ff;" text="Ver Amigos" textFill="WHITE">
+            <font>
+               <Font name="Book Antiqua" size="12.0" />
+            </font></Button>
+        </HBox>
+    </bottom>
+</BorderPane>

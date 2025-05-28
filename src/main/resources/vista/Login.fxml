@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="427.0" prefWidth="471.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.LoginController">
+   <Pane prefHeight="83.0" prefWidth="471.0" style="-fx-background-color: #d6dcfd;" />
+    <VBox alignment="CENTER" layoutX="50" layoutY="40" prefHeight="347.0" prefWidth="377.0" spacing="10">
+        <Label style="-fx-font-size: 18px;" text="Iniciar Sesión" textFill="#3908ff" />
+        <TextField fx:id="txtCorreo" prefHeight="25.0" prefWidth="281.0" promptText="Correo" />
+        <PasswordField fx:id="txtContrasena" promptText="Contraseña" />
+        <Button onAction="#handleLogin" style="-fx-background-color: #d6dcfd;" text="Ingresar" textFill="#406cb2" />
+        <Hyperlink onAction="#irRegistro" text="¿No tienes cuenta? Regístrate" />
+        <Button onAction="#cargarDatosPrueba" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #d6dcfd;" text="Cargar Datos de Prueba" />
+    </VBox>
+   <Label layoutX="115.0" layoutY="22.0" text="Red Social Educativa">
+      <font>
+         <Font name="Poor Richard" size="31.0" />
+      </font>
+   </Label>
+</AnchorPane>

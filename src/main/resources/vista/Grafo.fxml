@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="controladores.GrafoController">
+    <VBox spacing="15" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Visualización del Grafo de Afinidad" />
+
+        <HBox spacing="10">
+            <TextField fx:id="txtInicio" promptText="Correo del estudiante A" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="txtDestino" promptText="Correo del estudiante B" HBox.hgrow="ALWAYS" />
+            <Button onAction="#calcularRuta" style="-fx-background-color: #5e77ff;" text="Ruta más corta" textFill="WHITE">
+            <font>
+               <Font name="Book Antiqua" size="12.0" />
+            </font></Button>
+        </HBox>
+
+        <Label text="Ruta más corta:">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+        <TextArea fx:id="txtRuta" editable="false" prefHeight="80" wrapText="true" />
+
+        <Label text="Comunidades de estudio (clústeres):">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+        <TextArea fx:id="txtComunidades" editable="false" prefHeight="150" wrapText="true" />
+
+        <Label text="Conexiones del grafo:">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+        <ListView fx:id="listaConexiones" prefHeight="150" />
+
+        <Button onAction="#abrirVentanaVisualGrafo" style="-fx-background-color: #5e77ff;" text="Ver Grafo Visual" textFill="WHITE" />
+    </VBox>
+</AnchorPane>

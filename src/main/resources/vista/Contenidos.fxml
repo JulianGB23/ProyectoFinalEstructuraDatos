@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600" prefWidth="800" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="controladores.ContenidosController">
+
+    <top>
+        <VBox spacing="10" style="-fx-padding: 15;">
+            <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Gestión de Contenidos Educativos">
+            <font>
+               <Font name="Poor Richard" size="80.0" />
+            </font></Label>
+            <HBox spacing="10">
+                <TextField fx:id="campoBusqueda" promptText="Buscar por tema, autor o tipo" HBox.hgrow="ALWAYS" />
+                <Button onAction="#buscarContenido" style="-fx-background-color: #5e77ff;" text="Buscar" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua" size="12.0" />
+               </font></Button>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="tablaContenidos">
+            <columns>
+                <TableColumn fx:id="colTitulo" prefWidth="200" style="-fx-background-color: #d6dcfd;" text="Título" />
+                <TableColumn fx:id="colAutor" prefWidth="150" style="-fx-background-color: #d6dcfd;" text="Autor" />
+                <TableColumn fx:id="colTipo" prefWidth="100" style="-fx-background-color: #d6dcfd;" text="Tipo" />
+                <TableColumn fx:id="colValoracion" prefWidth="100" style="-fx-background-color: #d6dcfd;" text="Valoración" />
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox prefHeight="0.0" prefWidth="800.0" spacing="10" style="-fx-padding: 10;">
+            <Button onAction="#publicarContenido" style="-fx-background-color: #5e77ff;" text="Publicar Contenido" textFill="WHITE">
+            <font>
+               <Font name="Book Antiqua" size="12.0" />
+            </font></Button>
+            <Button onAction="#valorarContenido" style="-fx-background-color: #5e77ff;" text="Valorar Seleccionado" textFill="WHITE" />
+            <Button onAction="#eliminarContenido" style="-fx-background-color: #5e77ff;" text="Eliminar Seleccionado" textFill="WHITE" />
+
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="604.0" prefWidth="454.0" spacing="10" style="-fx-padding: 15;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="controladores.PerfilController">
+   <Pane prefHeight="93.0" prefWidth="423.0" style="-fx-background-color: #d6dcfd;">
+      <children>
+      
+          <Label layoutX="124.0" layoutY="16.0" style="-fx-font-size: 20;" text="Perfil del Estudiante" textFill="WHITE">
+            <font>
+               <Font name="Myanmar Text Bold" size="10.0" />
+            </font>
+         </Label>
+      </children>
+   </Pane>
+
+    <!-- Campo para intereses -->
+    <HBox spacing="5">
+        <TextField fx:id="campoInteres" promptText="Nuevo interés" HBox.hgrow="ALWAYS" />
+        <Button onAction="#agregarInteres" style="-fx-background-color: #5e77ff;" text="Agregar" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font></Button>
+    </HBox>
+
+    <ListView fx:id="listaIntereses" prefHeight="150" style="-fx-background-color: white;" />
+
+    <Separator />
+    <Button onAction="#eliminarInteres" style="-fx-background-color: #c50600;" text="Eliminar Interés Seleccionado" textFill="WHITE" />
+
+    <!-- Campos editables -->
+    <Label style="-fx-font-weight: bold;" text="Editar Información Personal">
+      <font>
+         <Font size="18.0" />
+      </font></Label>
+
+    <Label text="Nombre:">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font></Label>
+    <TextField fx:id="txtNombre" promptText="Nombre completo" />
+
+    <Label text="Correo:">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font></Label>
+    <TextField fx:id="txtCorreo" promptText="Correo electrónico" />
+
+    <Button onAction="#guardarCambios" style="-fx-background-color: #5e77ff;" text="Guardar Cambios" textFill="WHITE" />
+
+    <Separator />
+
+    <!-- Estadísticas -->
+    <VBox alignment="TOP_LEFT" spacing="8" style="-fx-background-color: #d6dcfd;">
+        <Label fx:id="lblPublicaciones" text="Contenidos publicados: " />
+        <Label fx:id="lblSolicitudes" prefWidth="123.0" text="Solicitudes de ayuda: " />
+        <Label fx:id="lblIntereses" text="Cantidad de intereses: " />
+    </VBox>
+
+</VBox>

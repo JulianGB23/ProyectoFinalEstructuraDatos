@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controladores.SolicitudAmistadController"
+            prefWidth="600" prefHeight="400">
+
+    <top>
+        <Label text="Solicitudes de Conexión Pendientes"
+               style="-fx-font-size: 18px; -fx-padding: 10;"/>
+    </top>
+
+    <center>
+        <TableView fx:id="tablaSolicitudes">
+            <columns>
+                <TableColumn fx:id="colEmisor" text="Correo del Estudiante que Envió" prefWidth="500"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" style="-fx-padding: 10;">
+            <Button text="Aceptar" onAction="#aceptarSolicitud"/>
+            <Button text="Rechazar" onAction="#rechazarSolicitud"/>
+        </HBox>
+    </bottom>
+</BorderPane>

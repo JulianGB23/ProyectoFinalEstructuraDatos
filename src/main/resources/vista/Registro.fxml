@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400" prefWidth="400" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.6" fx:controller="controladores.RegistroController">
+    <VBox alignment="CENTER" layoutX="39.0" layoutY="38.0" prefHeight="323.0" prefWidth="321.0" spacing="10">
+        <Label style="-fx-font-size: 18px;" text="Registro de Usuario" />
+        <TextField fx:id="txtNombre" promptText="Nombre" />
+        <TextField fx:id="txtCorreo" promptText="Correo" />
+        <PasswordField fx:id="txtContrasena" promptText="Contraseña" />
+        <ComboBox fx:id="cmbRol">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Estudiante" />
+                    <String fx:value="Moderador" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Button onAction="#registrarUsuario" text="Registrarse" />
+        <Hyperlink onAction="#irLogin" text="Volver al login" />
+    </VBox>
+</AnchorPane>

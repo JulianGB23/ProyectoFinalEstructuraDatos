@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="300" prefWidth="450" spacing="10" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="controladores.VerDetalleContenidoController">
+   <Pane prefHeight="61.0" prefWidth="453.0" style="-fx-background-color: #d6dcfd;">
+      <children>
+      
+          <Label layoutX="113.0" layoutY="1.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Detalle del Contenido" />
+      </children>
+   </Pane>
+
+    <Label fx:id="lblTitulo" text="Título: " />
+    <Label fx:id="lblAutor" text="Autor: " />
+    <Label fx:id="lblTipo" text="Tipo: " />
+    <Label fx:id="lblValoracion" text="Valoración: " />
+    <Label fx:id="lblDescripcion" text="Descripción: " />
+    <Label fx:id="lblFecha" text="Fecha de publicación: " />
+
+    <Button onAction="#cerrar" style="-fx-background-color: #5e77ff;" text="Cerrar" textFill="WHITE">
+      <font>
+         <Font name="Book Antiqua" size="12.0" />
+      </font></Button>
+</VBox>

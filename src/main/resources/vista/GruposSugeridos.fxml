@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="609.0" prefWidth="917.0" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.GruposSugeridosController">
+   <Pane layoutX="-12.0" prefHeight="71.0" prefWidth="910.0" style="-fx-background-color: #d6dcfd;" />
+
+    <VBox layoutX="165.0" spacing="15">
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Grupos de Estudio Sugeridos" />
+       <TitledPane expanded="true" style="-fx-background-color: #d6dcfd;" text="Detalles del Grupo">
+           <VBox spacing="5">
+               <Label fx:id="lblNombreGrupo" text="Nombre: -">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+               <Label fx:id="lblTemaGrupo" text="Tema: -">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+               <Label fx:id="lblMiembrosGrupo" text="Miembros: -">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+           </VBox>
+       </TitledPane>
+   
+        <ListView fx:id="listaGrupos" onMouseClicked="#mostrarMiembros" prefHeight="200" />
+
+        <TitledPane expanded="true" text="Miembros del Grupo Seleccionado">
+            <ListView fx:id="listaMiembros" prefHeight="120" />
+        </TitledPane>
+
+        <HBox spacing="10">
+            <Button onAction="#unirseGrupo" style="-fx-background-color: #5e77ff;" text="Unirse al Grupo" textFill="WHITE">
+            <font>
+               <Font name="Book Antiqua" size="12.0" />
+            </font></Button>
+            <Button onAction="#salirseGrupo" style="-fx-background-color: #5e77ff;" text="Salirse del Grupo" textFill="WHITE">
+            <font>
+               <Font name="Book Antiqua" size="12.0" />
+            </font></Button>
+            <Button onAction="#crearGrupo" style="-fx-background-color: #5e77ff;" text="Crear Nuevo Grupo" textFill="WHITE">
+            <font>
+               <Font name="Book Antiqua" size="12.0" />
+            </font></Button>
+            <Button onAction="#verMisGrupos" style="-fx-background-color: #5e77ff;" text="Ver Mis Grupos" textFill="WHITE">
+            <font>
+               <Font name="Book Antiqua" size="12.0" />
+            </font></Button>
+            <Button onAction="#editarGrupo" style="-fx-background-color: #5e77ff;" text="Editar Grupo" textFill="WHITE">
+            <font>
+               <Font name="Book Antiqua" size="12.0" />
+            </font></Button>
+            <Button onAction="#verGruposSugeridos" style="-fx-background-color: #5e77ff;" text="Ver Grupos Sugeridos" textFill="WHITE">
+            <font>
+               <Font name="Book Antiqua" size="12.0" />
+            </font></Button>
+
+        </HBox>
+    </VBox>
+
+
+</AnchorPane>
